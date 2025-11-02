@@ -5,6 +5,21 @@
   text-align: center;
 }
 
+.glow-overlay {
+  pointer-events: none;
+  box-shadow: 0 0 25px rgba(var(--primary-rgb), 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-sm {
+  transition: all 0.3s ease;
+}
+
+.glow-sm:hover {
+  box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.4);
+  transform: scale(1.02);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import MagneticButton from "./MagneticButton";
 import heroBg from "@/assets/hero-bg.jpg";
+import profilePic from "@/assets/profile.png";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -48,6 +49,14 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
+            <div className="w-32 h-32 mx-auto mb-6 relative">
+              <img
+                src={profilePic}
+                alt="Malav Patel"
+                className="rounded-full w-full h-full object-cover border-4 border-primary/30 glow-sm"
+              />
+              <div className="absolute inset-0 rounded-full glow-overlay"></div>
+            </div>
             <span className="inline-block px-4 py-2 bg-card/50 border border-primary/30 rounded-full text-sm text-primary glow">
               AI/ML Undergraduate • Gujarat University
             </span>
