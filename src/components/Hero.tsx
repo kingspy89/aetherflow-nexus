@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import MagneticButton from "./MagneticButton";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -40,69 +42,109 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-6 animate-fade-in">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6"
+          >
             <span className="inline-block px-4 py-2 bg-card/50 border border-primary/30 rounded-full text-sm text-primary glow">
               AI/ML Undergraduate • Gujarat University
             </span>
-          </div>
+          </motion.div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-6xl md:text-8xl font-bold mb-6"
+          >
             Malav <span className="gradient-text">Patel</span>
-          </h1>
+          </motion.h1>
           
           <div className="h-16 mb-8">
-            <p className="text-2xl md:text-3xl text-primary-glow font-light">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="text-2xl md:text-3xl text-primary-glow font-light"
+            >
               {displayText}
               <span className="animate-pulse">|</span>
-            </p>
+            </motion.p>
           </div>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto"
+          >
             Building intelligent systems with Generative AI, Multi-Cloud Integration, and Data-Driven Innovation
-          </p>
+          </motion.p>
           
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-            <Button
-              onClick={() => scrollToSection("projects")}
-              size="lg"
-              className="bg-primary hover:bg-primary-dark text-primary-foreground glow-intense"
-            >
-              View Projects
-            </Button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              size="lg"
-              variant="outline"
-              className="border-primary/50 text-primary hover:bg-primary/10"
-            >
-              Contact Me
-            </Button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+            className="flex flex-wrap items-center justify-center gap-4 mb-12"
+          >
+            <MagneticButton>
+              <Button
+                onClick={() => scrollToSection("projects")}
+                size="lg"
+                className="bg-primary hover:bg-primary-dark text-primary-foreground glow-intense"
+              >
+                View Projects
+              </Button>
+            </MagneticButton>
+            <MagneticButton>
+              <Button
+                onClick={() => scrollToSection("contact")}
+                size="lg"
+                variant="outline"
+                className="border-primary/50 text-primary hover:bg-primary/10"
+              >
+                Contact Me
+              </Button>
+            </MagneticButton>
+          </motion.div>
           
-          <div className="flex items-center justify-center gap-6">
-            <a
-              href="https://github.com/kingspy89"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors glow"
-            >
-              <Github className="w-6 h-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/malav-patel-766196302"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors glow"
-            >
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a
-              href="mailto:malav0003@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors glow"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1 }}
+            className="flex items-center justify-center gap-6"
+          >
+            <MagneticButton>
+              <a
+                href="https://github.com/kingspy89"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors glow"
+              >
+                <Github className="w-6 h-6" />
+              </a>
+            </MagneticButton>
+            <MagneticButton>
+              <a
+                href="https://www.linkedin.com/in/malav-patel-766196302"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors glow"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+            </MagneticButton>
+            <MagneticButton>
+              <a
+                href="mailto:malav0003@gmail.com"
+                className="text-muted-foreground hover:text-primary transition-colors glow"
+              >
+                <Mail className="w-6 h-6" />
+              </a>
+            </MagneticButton>
+          </motion.div>
         </div>
       </div>
       
