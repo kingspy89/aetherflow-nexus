@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import MagneticButton from "./MagneticButton";
 import heroBg from "@/assets/hero-bg.jpg";
-import profilePic from "@/assets/profile.png";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -51,7 +50,7 @@ const Hero = () => {
           >
             <div className="w-32 h-32 mx-auto mb-6 relative">
               <img
-                src={profilePic}
+                src="/profile.png"
                 alt="Malav Patel"
                 className="rounded-full w-full h-full object-cover border-4 border-primary/30 glow-sm"
               />
