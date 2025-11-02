@@ -8,7 +8,7 @@ const Skills = () => {
     },
     {
       title: "AI/ML",
-      skills: ["Neural Networks", "NLP", "Generative AI", "Prompt Engineering"],
+      skills: ["Generative AI", "Prompt Engineering"],
     },
     {
       title: "Cloud & Tools",
