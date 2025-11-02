@@ -19,7 +19,7 @@ const Certifications = () => {
       title: "Google Cloud Generative AI Certification",
       issuer: "Google Cloud",
       year: "2025",
-      logo: "https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04b39a9d9ac4198e1cd7fbe04ef/cloud/images/cloud-logo.svg",
+      logo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
     },
     {
       title: "CS50's Introduction to Programming with Python",
@@ -31,7 +31,7 @@ const Certifications = () => {
       title: "Data Analytics Virtual Project",
       issuer: "Deloitte",
       year: "2025",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg",
+      logo: "https://logos-world.net/wp-content/uploads/2021/08/Deloitte-Symbol.png",
     },
   ];
 
@@ -60,7 +60,8 @@ const Certifications = () => {
                 <img
                   src={cert.logo}
                   alt={cert.issuer}
-                  className="h-8 object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                  className="h-10 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                  style={{ maxWidth: '120px' }}
                 />
               </div>
               <h3 className="text-base font-semibold text-foreground mb-2 leading-tight">
