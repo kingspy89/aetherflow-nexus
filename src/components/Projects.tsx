@@ -9,8 +9,8 @@ const Projects = () => {
       description:
         "Developed with Python, Streamlit, GCP, and Gemini API. Integrated OpenAI and Gemini for real-time NLP and achieved 85% detection accuracy.",
       tech: ["Python", "Streamlit", "GCP", "Gemini API", "OpenAI", "NLP"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/kingspy89",
+      live: "https://github.com/kingspy89",
     },
     {
       title: "CrediScope",
@@ -18,8 +18,8 @@ const Projects = () => {
       description:
         "Designed real-time analytics and credit scoring using Google APIs and Firebase. Deployed fully functional app with cloud-backed intelligence.",
       tech: ["Google APIs", "Firebase", "Real-time Analytics", "Cloud Integration"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/kingspy89",
+      live: "https://github.com/kingspy89",
     },
   ];
 
